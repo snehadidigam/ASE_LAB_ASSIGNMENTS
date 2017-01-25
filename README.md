@@ -1,2 +1,13 @@
 # ASE_LAB_ASSIGNMENTS
 THIS REPOSITORY CONSISTS OF ASSIGNMENTS
+
+
+NAME: SNEHA DIDIGAM
+COURSE: ASE
+CLASS ID: 19
+UMKC ID: 16230082
+
+This README.md file is responsible for holding ASE LAB_ASSIGNMENTS
+
+There are LABS and ASSIGNMENTS
+LIST OF of assignments are present in this repository
