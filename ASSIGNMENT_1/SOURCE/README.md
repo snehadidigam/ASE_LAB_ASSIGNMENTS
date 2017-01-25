@@ -9,4 +9,4 @@ UMKC ID: 16230082
 
 This README.md file is responsible for holding ASE LAB_ASSIGNMENT ONE
 
-Link for WIKI page : https://github.com/snehadidigam/ASE_LAB_ASSIGNMENTS.wiki.git
+Link for WIKI page : https://github.com/snehadidigam/ASE_LAB_ASSIGNMENTS/wiki/AssignmentOneWIKI
