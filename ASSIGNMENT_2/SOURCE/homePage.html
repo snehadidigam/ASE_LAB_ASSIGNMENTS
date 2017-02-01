@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="" data-ng-app="GoogleDirection" data-ng-app="weatherctrl">
+<html lang="" data-ng-app="GoogleDirection" data-ng-app="weatherctrl" xmlns="http://www.w3.org/1999/html">
 
 <head>
 
@@ -24,8 +24,6 @@
     height: 600px;
 
 }
-
-
 
 h1 { text-align : center ;
 
@@ -69,18 +67,15 @@ div {
 
 }
 
-
+.sclass{
+    background-color: transparent;
+}
 
 .container {
 
     padding: 25px;
 
-	
-
 }
-
-
-
 .weatherModule {
 
   background: #f2f2f2;
@@ -95,10 +90,9 @@ div {
 
 }
 
+
 h1 {
 		color : darkblue;}
-
-
 
     </style>
 
@@ -219,65 +213,44 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
-    <form>
+    <form name="sform" class="sclass">
 
 
 
         <div class="form-group">
 
-            <input class="directbutton" type="submit" value="Temparature at Source" ng-click="findWeather(zip)" />
+            <input class="directbutton" type="submit" value="Source Temparature" ng-click="findWeather(zip)" />
 
         </div>
-
-
-
-    </form>
-
 
 
     <p ng-show="zip">Searching the forecasts for: {{zip}}</p>
 
 
-
     <div>
 
-
-
-        <h3>Weather at {{ place.location.city }}
-            <img class="img-thumbnail forecast-img" src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif" />Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}F</h3>
-
-
-
-
-
-
+        <h3>{{ place.location.city }} Climate is: {{ place.item.condition.text }}
+        </br>
+            <img class="img-thumbnail forecast-img" src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif" /> <br>{{ place.item.condition.temp }}F</h3>
 
     </div>
 
 
 
-</div>
 
 <div   data-ng-controller="weatherCtrl1">
 
 
 
-    <input class="directbutton" type="submit" value="Temparature at destination" ng-click="findWeather()" />
+    <input class="directbutton" type="submit" value="Destination Temparature" ng-click="findWeather()" />
 
 
 
     <div>
 
-
-
-        <h3>Weather at {{ place.location.city }}
-        <img class="img-thumbnail forecast-img" src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif" />Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}F</h3>
-
-
-
-
-
-
+        <h3>{{ place.location.city }} Climate is: {{ place.item.condition.text }}
+            </br>
+            <img class="img-thumbnail forecast-img" src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif" /> <br> {{ place.item.condition.temp }}F</h3>
 
     </div>
 
@@ -285,7 +258,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 </div>
 
-
+</form>
 
     </body>
 
