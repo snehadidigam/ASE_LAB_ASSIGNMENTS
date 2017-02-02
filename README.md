@@ -6,4 +6,7 @@ NAME : SNEHA DIDIGAM
 CLASS ID 19
 
 
-ASSIGNMENT1 WIKI LINK: https://github.com/snehadidigam/ASE_LAB_ASSIGNMENTS/wiki/AssignmentOneWIKI
+ASSIGNMENT1 WIKI LINK : https://github.com/snehadidigam/ASE_LAB_ASSIGNMENTS/wiki/AssignmentOneWIKI
+
+ASSIGNMENT2 WIKI LINK : https://github.com/snehadidigam/ASE_LAB_ASSIGNMENTS/wiki/AssignmentTwoWIKI
+
