@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Directions</title>
 
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB3EftxjlwZYFtxmJwlC0PQK5R3JcAFPVg&v=3.exp&sensor=true&amp;libraries=places"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDqBfIcylR890_VX2t6DtZyGimGE5I_9tA&v=3.exp&sensor=true&amp;libraries=places"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/paper/bootstrap.min.css" rel="stylesheet">
 
@@ -341,7 +341,7 @@
         };
         $scope.getWeatherEnd = function () {
             var end = document.getElementById('endlocation').value;
-            $http.get('http://api.worldweatheronline.com/free/v2/weather.ashx?q=' + end + '&key=3e0e4ae54c6e84fece9764bb38542&format=json&tp=24&num_of_days=1').success(function (data1) {
+            $http.get('http://api.worldweatheronline.com/free/v2/weather.ashx?q=' + end + '&key=AIzaSyDqBfIcylR890_VX2t6DtZyGimGE5I_9tA&format=json&tp=24&num_of_days=1').success(function (data1) {
                 $scope.tempEnd = data1.data.current_condition[0].temp_F;
                 $scope.iconEnd = data1.data.current_condition[0].weatherIconUrl[0].value;
                  $scope.weatherEnd = data1.data.current_condition[0].weatherDesc[0].value;
@@ -353,7 +353,7 @@
 
         $scope.getWeatherStart = function () {
             var start = document.getElementById('startlocation').value;
-            $http.get('http://api.worldweatheronline.com/free/v2/weather.ashx?q=' + start + '&key=3e0e4ae54c6e84fece9764bb38542&format=json&tp=24&num_of_days=1').success(function (data1) {
+            $http.get('http://api.worldweatheronline.com/free/v2/weather.ashx?q=' + start + '&key=AIzaSyDqBfIcylR890_VX2t6DtZyGimGE5I_9tA&format=json&tp=24&num_of_days=1').success(function (data1) {
                 $scope.tempStart = data1.data.current_condition[0].temp_F;
                 $scope.iconStart = data1.data.current_condition[0].weatherIconUrl[0].value;
                  $scope.weatherStart = data1.data.current_condition[0].weatherDesc[0].value;
