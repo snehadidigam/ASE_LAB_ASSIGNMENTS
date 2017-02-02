@@ -12,6 +12,8 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
 
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDqBfIcylR890_VX2t6DtZyGimGE5I_9tA&v=3.exp&sensor=true&amp;libraries=places"></script>
+
     <!-- google API console key
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8_pggbB61a8LYnUXtYac-1QM5Qwx7v5o&v=3.exp&sensor=true"></script>
 -->
@@ -19,7 +21,7 @@
 
      #map-canvas {
 
-    width: 600px;
+    width: 800px;
 
     height: 600px;
 
@@ -47,6 +49,19 @@ div {
 
 		}
 
+     .button {
+         background-color: #4CAF50;
+         border: none;
+         color: white;
+         padding: 15px 32px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+         margin: 4px 2px;
+         cursor: pointer;
+     }
+     /*
 .button {
 
     background-color: white;
@@ -66,7 +81,7 @@ div {
     cursor: pointer;
 
 }
-
+*/
 .sclass{
     background-color: transparent;
 }
@@ -91,14 +106,14 @@ div {
 }
 
 
-h1 {
+h1,h3,label {
 		color : darkblue;}
 
     </style>
 
     <br/>
     <br/>
-<h1><strong>Welcome to our Home Page!</strong></h1><br/>
+<h1><strong>Welcome to our Home Page!</strong></h1>
     <h1> DIRECTIONS AND WEATHER CONDITIONS </h1>
 <script src="http://maps.googleapis.com/maps/api/js"></script>
 
@@ -159,7 +174,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
     <!--  google maps javascript key for directions   -->
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqBfIcylR890_VX2t6DtZyGimGE5I_9tA&v=3.exp&sensor=true"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqBfIcylR890_VX2t6DtZyGimGE5I_9tA&v=3.exp&sensor=true&amp;libraries=places"></script>
 
   <link rel="stylesheet" href="css/main.css">  
 
@@ -183,7 +198,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 				<label><b>TO </b></label>
 
-                <input type="text"  ng-model="endlocation"    id="endlocation" /> 
+                <input type="text"  ng-model="endlocation"    id="endlocation" />
 
                 <button id="button" ng-click="calcRoute()">
 
@@ -270,7 +285,34 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 <script>
 
-var app=angular.module('GoogleDirection', []);
+    //// Auto Complete
+    /*
+    var googleDemo = angular.module('GoogleDirection', [])
+    googleDemo.directive('googleplace', function () {
+        return {
+            require: 'ngModel',
+            link: function (scope, element, attrs, model) {
+                var options = {
+                    types: [],
+                };
+                scope.gPlace = new google.maps.places.Autocomplete(element[0],
+                    options);
+                google.maps.event.addListener(scope.gPlace, 'place_changed',
+                    function () {
+                        scope.$apply(function () {
+                            model.$setViewValue(element.val());
+                        });
+                    });
+            }
+        };
+    });*/
+
+    /////
+    var app=angular.module('GoogleDirection', []);
+
+
+
+
 
 app.controller('googlemapoutput', function ($scope) {
 
@@ -288,7 +330,26 @@ app.controller('googlemapoutput', function ($scope) {
 
     var directionsService = new google.maps.DirectionsService();
 
+//AutoComplete
+    app.directive('googleplace',function(){
+        return {
+            require: 'ngModel',
+            link: function (scope, element, attrs, model){
+                var options = {
+                    types: [],
+                };
+                scope.gPlace = new google.maps.places.Autocomplete(element[0],options);
+                google.maps.event.addListener(scope.gPlace, 'place_changed',
+                    function(){
+                        scope.$apply(function () {
+                            model.$setViewValue(element.val());
+                        });
+                    });
+            }
+        };
+    });
 
+///AutoComplete
 
     $scope.initialize = function () {
 
