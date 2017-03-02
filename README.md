@@ -15,3 +15,5 @@ ASSIGNMENT3 WIKI LINK : https://github.com/snehadidigam/ASE_LAB_ASSIGNMENTS/wiki
 ASSIGNMENT4 WIKI LINK : https://github.com/snehadidigam/ASE_LAB_ASSIGNMENTS/wiki/AssignmentFourWiki
 
 ASSIGNMENT5 WIKI LINK : https://github.com/snehadidigam/ASE_LAB_ASSIGNMENTS/wiki/AssignmentFiveWIKI
+
+ASSIGNMENT6 WIKI LINK : https://github.com/snehadidigam/ASE_LAB_ASSIGNMENTS/wiki/AssignmentSixWIKI
