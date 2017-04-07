@@ -23,3 +23,5 @@ ASSIGNMENT7 WIKI LINK : https://github.com/snehadidigam/ASE_LAB_ASSIGNMENTS/wiki
 ASSIGNMENT8 WIKI LINK : https://github.com/snehadidigam/ASE_LAB_ASSIGNMENTS/wiki/AssignmentEightWIKI
 
 ASSIGNMENT9 WIKI LINK : https://github.com/snehadidigam/ASE_LAB_ASSIGNMENTS/wiki/AssignmentNineWIKI
+
+ASSIGNMENT10 WIKI LINK : https://github.com/snehadidigam/ASE_LAB_ASSIGNMENTS/wiki/AssignmentTenWIKI
